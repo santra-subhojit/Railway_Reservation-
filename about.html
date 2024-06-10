@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Rail Rover</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: antiquewhite;
+            background: linear-gradient(to right, #5d5a5a, #302d2d);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar, .footer {
+            background: linear-gradient(to right, #000000, #434343);
+        }
+        .container {
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .team-member {
+            text-align: center;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .team-member:hover {
+            transform: scale(1.05);
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: box-shadow 0.3s ease;
+        }
+        .team-member img:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+        .team-member h3 {
+            margin: 10px 0 5px;
+        }
+        .team-member p {
+            margin: 5px 0;
+        }
+        .team-member a {
+            color: #1a0dab;
+            text-decoration: none;
+        }
+        .team-member a:hover {
+            text-decoration: underline;
+        }
+        .tech-icon {
+            font-size: 3rem;
+            color: #ffffff;
+            transition: transform 0.3s ease;
+        }
+        .tech-icon:hover {
+            transform: scale(1.2);
+        }
+        .card {
+            background-color: #434343;
+            color: #ffffff;
+            border: none;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+        footer {
+            background: linear-gradient(to right, #000000, #434343);
+            padding: 20px 0;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Rail Rover</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reservation.html">Make a Reservation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="help.html">Help</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="section">
+            <h1>About Us</h1>
+            <p>Welcome to Rail Rover! We are a railway reservation site dedicated to providing seamless ticket booking experiences. "Destination to your tickets"!</p>
+        </header>
+
+        <section class="section">
+            <h2>About the Project</h2>
+            <p>
+                Our project involves creating a comprehensive web-based system for railway ticket reservations, capturing essential journey and passenger details, including meal preferences. Utilizing advanced front-end tools like HTML, CSS, JavaScript, and Bootstrap, we ensure a seamless, intuitive, and user-friendly booking experience. The system efficiently confirms reservations, providing a streamlined, reliable, and convenient service for travelers.</p>
+        </section>
+
+        <section class="section">
+            <h2>Technologies Used</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fab fa-html5 tech-icon"></i>
+                            <h5 class="card-title mt-3">HTML</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fab fa-css3-alt tech-icon"></i>
+                            <h5 class="card-title mt-3">CSS</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fab fa-js tech-icon"></i>
+                            <h5 class="card-title mt-3">JavaScript</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center mt-4">
+                        <div class="card-body">
+                            <i class="fab fa-node tech-icon"></i>
+                            <h5 class="card-title mt-3">Node.js</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center mt-4">
+                        <div class="card-body">
+                            <i class="fab fa-bootstrap tech-icon"></i>
+                            <h5 class="card-title mt-3">Bootstrap</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center mt-4">
+                        <div class="card-body">
+                            <i class="fas fa-robot tech-icon"></i>
+                            <h5 class="card-title mt-3">ChatGPT</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Meet the Team</h2>
+            <div class="row">
+                <div class="col-md-4 team-member">
+                    <img src="pp.jpg" alt="Priyangshu Roy">
+                    <h3>Priyangshu Roy</h3>
+                    <p>Priyangshu skilled in graphic design and enamored with UI/UX, blending creativity with functionality to craft captivating digital experiences.</p>
+                    <p><a href="https://www.linkedin.com/in/priyangshu-roy" target="_blank">LinkedIn</a> | <a href="priyangshuuu21@gmail.com">Gmail</a></p>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="ss.jpg" alt="Subhojit Santra">
+                    <h3>Subhojit Santra</h3>
+                    <p>Subhojit has a fervent passion for web development as well as AIML, driven to innovate and create transformative digital solutions with creativity.</p>
+                    <p><a href="https://www.linkedin.com/in/subhojit-santra-a85bb3306/" target="_blank">LinkedIn</a> | <a href="subhojit0081@gmail.com">Gmail</a></p>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="rr.jpg" alt="Riyam Sarkar">
+                    <h3>Riyam Sarkar</h3>
+                    <p>Riyam pursuing software engineering with knowledge in project management, aiming to integrate technical expertise with efficient project coordination for successful execution.</p>
+                    <p><a href="https://www.linkedin.com/in/riyam-sarkar-29b941253/" target="_blank">LinkedIn</a> | <a href="Riyam22sarkar@gmail.com">Gmail</a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="text-center mt-5 py-4 bg-dark text-white">
+        <p>© 2024 Rail Rover. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

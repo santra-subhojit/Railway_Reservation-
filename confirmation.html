@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="c.css">
+    <style>
+        .custom-navbar {
+            background: linear-gradient(45deg, #077c32, #00FF7F);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+        <a class="navbar-brand" href="#">Rail Rover</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reservation.html">Make a Reservation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2>Booking Confirmation</h2>
+        <div id="confirmation-details">
+            <!-- Confirmation details will be inserted here by JavaScript -->
+        </div>
+        <div class="mt-4">
+            <a href="index.html" class="btn btn-secondary">Back to Home</a>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const confirmationDetailsDiv = document.getElementById('confirmation-details');
+            if (confirmationDetailsDiv) {
+                const reservationDetails = JSON.parse(localStorage.getItem('reservationDetails'));
+                if (reservationDetails) {
+                    const trainName = reservationDetails.train.name;
+                    const trainNumber = reservationDetails.train.number;
+                    confirmationDetailsDiv.innerHTML = `
+                        <p><strong>From:</strong> ${reservationDetails.from}</p>
+                        <p><strong>To:</strong> ${reservationDetails.to}</p>
+                        <p><strong>Date:</strong> ${reservationDetails.date}</p>
+                        <p><strong>Class:</strong> ${reservationDetails.class}</p>
+                        <p><strong>Meal:</strong> ${reservationDetails.meal}</p>
+                        <p><strong>Train Name/No:</strong> ${trainName} (${trainNumber})</p> <!-- Display the train name and number -->
+                        <p><strong>Passengers:</strong> ${reservationDetails.passengers.join(', ')}</p>
+                        <p><strong>Total Cost:</strong> Rs.${reservationDetails.totalCost}</p> <!-- Display total cost -->
+                    `;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Reservation System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Railway Reservation System</h1>
+        <form id="reservation-form">
+            <div class="form-group">
+                <label for="train-number">Train Number:</label>
+                <input type="text" class="form-control" id="train-number" placeholder="Enter Train Number">
+            </div>
+            <div class="form-group">
+                <label for="from-station">From Station:</label>
+                <input type="text" class="form-control" id="from-station" placeholder="Enter From Station">
+            </div>
+            <div class="form-group">
+                <label for="to-station">To Station:</label>
+                <input type="text" class="form-control" id="to-station" placeholder="Enter To Station">
+            </div>
+            <div class="form-group">
+                <label for="journey-date">Journey Date:</label>
+                <input type="date" class="form-control" id="journey-date">
+            </div>
+            <div class="form-group">
+                <label for="class-type">Class Type:</label>
+                <select class="form-control" id="class-type">
+                    <option value="AC">AC</option>
+                    <option value="Non-AC">Non-AC</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="number-of-passengers">Number of Passengers:</label>
+                <input type="number" class="form-control" id="number-of-passengers" min="1" max="6">
+            </div>
+            <button type="submit" class="btn btn-primary">Book Ticket</button>
+        </form>
+        <div id="reservation-details" class="mt-4">
+            <h2>Reservation Details:</h2>
+            <p id="train-number-display"></p>
+            <p id="from-station-display"></p>
+            <p id="to-station-display"></p>
+            <p id="journey-date-display"></p>
+            <p id="class-type-display"></p>
+            <p id="number-of-passengers-display"></p>
+            <p id="total-fare-display"></p>
+        </div>
+
+        <script>
+            $(document).ready(function() {
+                $('#reservation-form').submit(function(event) {
+                    event.preventDefault();
+                    var trainNumber = $('#train-number').val();
+                    var fromStation = $('#from-station').val();
+                    var toStation = $('#to-station').val();
+                    var journeyDate = $('#journey-date').val();
+                    var classType = $('#class-type').val();
+                    var numberOfPassengers = $('#number-of-passengers').val();
+
+                    // Calculate total fare based on class type and number of passengers
+                    var totalFare = 0;
+                    if (classType === 'AC') {
+                        totalFare = numberOfPassengers * 1000;
+                    } else {
+                        totalFare = numberOfPassengers * 500;
+                    }
+
+                    // Display reservation details
+                    $('#train-number-display').text('Train Number: ' + trainNumber);
+                    $('#from-station-display').text('From Station: ' + fromStation);
+                    $('#to-station-display').text('To Station: ' + toStation);
+                    $('#journey-date-display').text('Journey Date: ' + journeyDate);
+                    $('#class-type-display').text('Class Type: ' + classType);
+                    $('#number-of-passengers-display').text('Number of Passengers: ' + numberOfPassengers);
+                    $('#total-fare-display').text('Total Fare: ₹' + totalFare);
+
+                    // Clear form fields
+                    $('#reservation-form')[0].reset();
+                });
+            });
+        </script>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

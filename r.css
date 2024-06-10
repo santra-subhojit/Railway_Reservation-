@@ -1,0 +1,52 @@
+body {
+    background-image: url('r.jpg'); /* Add your background image */
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(0, 0, 0);
+    height: 100vh;
+    margin: 0;
+
+}
+
+.navbar {
+    background: rgba(255, 0, 0, 0.477);
+}
+
+.container {
+    background: rgba(67, 200, 249, 0.7); /* Lower opacity */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px; /* Set a max-width to make the form more centered */
+    margin: auto; /* Center the container horizontally */
+}
+
+h2 {
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+form {
+    animation: fadeIn 2s;
+}
+
+#passenger-form h3 {
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #1e90ff, #00bfff);
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #00bfff, #1e90ff);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

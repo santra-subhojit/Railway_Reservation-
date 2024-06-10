@@ -1,0 +1,101 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #0f0f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('cfrm.jpg'); /* Add your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden; /* Hide scrollbars */
+}
+
+.navbar {
+    background: rgba(0, 128, 0, 0.8); /* Slightly more transparent green */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1; /* Ensure it appears above the background */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    animation: slideDown 1s ease-out;
+}
+
+@keyframes slideDown {
+    from { top: -50px; }
+    to { top: 0; }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95); /* Slightly higher opacity */
+    padding: 30px; /* Increased padding */
+    border-radius: 20px; /* Adjusted for modern look */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Larger shadow */
+    max-width: 600px; /* Set a max-width to make the form more centered */
+    position: relative; /* Ensure it appears above the background */
+    z-index: 1; /* Ensure it appears above the background */
+    margin-top: 70px; /* More space from the top */
+    border: 3px solid #109b00; /* Slimmer border */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
+}
+
+.container:before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    width: 60px;
+    height: 30px;
+    background: #109b00; /* Match the border color */
+    border-radius: 15px;
+    transform: translateX(-50%) rotate(-45deg);
+    z-index: 2; /* Ensure it appears above the container */
+}
+
+h2 {
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Softer shadow */
+    color: #004085; /* Color for better readability */
+    animation: fadeIn 2s ease-in-out;
+}
+
+#confirmation-details p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.6; /* Improved readability */
+    animation: fadeIn 2s ease-in-out;
+}
+
+.btn-secondary {
+    background: linear-gradient(45deg, #6c757d, #343a40);
+    border: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px; /* Rounded button */
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(45deg, #343a40, #6c757d);
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 2s;
+}
